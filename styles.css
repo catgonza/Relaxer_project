@@ -17,7 +17,7 @@ body {
 .heading {
   font-size: 50px;
   position: absolute;
-  top: 200px;
+  top: 80px;
 }
 
 .container {
@@ -84,5 +84,31 @@ body {
   }
   to {
     transform: rotate(360deg);
+  }
+}
+
+.container.grow {
+  animation: grow 3s linear forwards;
+}
+
+@keyframes grow {
+  from {
+    transform: scale(1);
+  }
+  to {
+    transform: scale(1.2);
+  }
+}
+
+.container.shrink {
+  animation: shrink 3s linear forwards;
+}
+
+@keyframes shrink {
+  from {
+    transform: scale(1.2);
+  }
+  to {
+    transform: scale(1);
   }
 }
